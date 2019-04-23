@@ -1,0 +1,365 @@
+.vocesabia{
+    padding: 0;
+    min-height: 90vh;
+    .vs{
+        &-titulo {
+            background: $cor2;
+            color: $cor3;
+            height: 40vw;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .titulo {
+                font-family: $font3;
+                font-weight: $light;
+                font-display: swap;
+                font-size: 1.35rem;
+                line-height: 1.5rem;
+                text-transform: uppercase;
+
+                strong {
+                    font-weight: $black;
+                }
+            }
+        }
+        &-bloco{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            &-item{
+                width: 50%;
+                height: 50vw;
+                overflow: hidden;
+                flex: 0 0 auto;
+                &-imagem{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                &-texto{
+                    width: 100%;
+                    height: 100%;
+                    // padding: 4.2rem;
+                    padding: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    &:hover {
+                        .seta{
+                            animation-name: bounce;
+                        }
+                    }
+                    p{
+                        font-family: $font3;
+                        font-weight: $normal;
+                        font-display: swap;
+                        // font-size: 1.16rem;
+                        font-size: 0.8rem;
+                        color: $cor1;
+                        margin-bottom: 0;
+                    }
+                    &.vs-t1{
+                        background-color: $cor4;
+                    }
+                    &.vs-t2 {
+                        background-color: $cor3;
+                        p{
+                            color: $cor2;
+                        }
+                    }
+                    .seta{
+                        height: 40px;
+                        width: 40px;
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        animation-duration: 1s;
+                        animation-fill-mode: both;
+                        animation-timing-function: ease-in-out;
+                        animation-iteration-count: infinite;
+                    }
+                }
+                &.elem1{
+                    order: 1;
+                }
+                &.elem2 {
+                    order: 2;
+                }
+                &.elem3 {
+                    order: 3;
+                }
+                &.elem4 {
+                    order: 4;
+                }
+                &.elem5 {
+                    order: 5;
+                }
+                &.elem6 {
+                    order: 6;
+                }
+                &.elem7 {
+                    order: 7;
+                }
+                &.elem8 {
+                    order: 8;
+                }
+            }
+        }
+        &-info{
+            background: $cor1;
+            color: $cor3;
+            height: 40vw;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-big {
+                font-family: $font3;
+                font-weight: $bold;
+                font-display: swap;
+                font-size: 0.8rem;
+                margin: 0;
+                span {
+                    color: $cor3;
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes bounce {
+
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    40% {
+        -webkit-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        transform: translateX(-10px)
+    }
+
+    60% {
+        -webkit-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+        transform: translateX(-5px)
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .vocesabia {
+        .vs {
+            &-titulo {
+                .titulo {
+                    font-size: 1.7rem;
+                    line-height: 2.1rem;
+                }
+            }
+
+            &-bloco {
+                &-item {
+                    &-texto {
+                        padding: 4rem;
+                        &:hover {
+                            .seta {
+                                animation-name: bounce;
+                            }
+                        }
+
+                        p {
+                            font-size: 0.9rem;
+                            line-height: 1.2rem;
+                        }
+                    }
+                }
+            }
+
+            &-info {
+                &-big {
+                    font-size: 0.9rem;
+                    line-height: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .vocesabia {
+        padding: 0;
+        min-height:auto;
+
+        .vs {
+            &-bloco{
+                height: 49.9995vw;
+            }
+            &-titulo {
+                background: $cor2;
+                color: $cor3;
+                height: 16.5556vw;
+                width: 33.3333vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .titulo {
+                    font-family: $font3;
+                    font-weight: $light;
+                    font-display: swap;
+                    font-size: 2.1rem;
+                    line-height: 2.5rem;
+
+                    strong {
+                        font-weight: $black;
+                        display: block;
+                    }
+                }
+            }
+
+            &-bloco {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                width: 100%;
+                position: relative;
+
+                &-item {
+                    width: 33.3333vw;
+                    height: 16.5556vw;
+                    overflow: hidden;
+                    flex: 0 0 auto;
+
+                    &-imagem {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transform: scale(1.01);
+                        transition: all 5s;
+                        &:hover{
+                            transform: scale(1.05);
+                            transition: all 15s;
+                        }
+                    }
+
+                    &-texto {
+                        padding: 2rem;
+                        p {
+                            // font-size: 1rem;
+                            line-height: 1.2rem;
+                        }
+
+                        &.vs-t1 {
+                            background-color: $cor4;
+                        }
+
+                        &.vs-t2 {
+                            background-color: $cor3;
+
+                            p {
+                                color: $cor2;
+                            }
+                        }
+
+                        .seta {
+                            height: 40px;
+                            width: 40px;
+                            display: block;
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                        }
+                    }
+
+                    &.elem1 {
+                        order: 2;
+                        height: 33.3333vw;
+                    }
+
+                    &.elem2 {
+                        order: 4;
+                        width: 16.5556vw;
+                        padding: 0;
+                        position: absolute;
+                        left: 33.3333vw;
+                    }
+
+                    &.elem3 {
+                        order: 5;
+                        width: 16.5556vw;
+                        padding: 0;
+                        position: absolute;
+                        left: 16.79vw;
+                        top: 16.55556vw;
+                    }
+
+                    &.elem4 {
+                        order: 2;
+                        height: 33.3333vw;
+                    }
+
+                    &.elem5 {
+                        order: 5;
+                    }
+
+                    &.elem6 {
+                        order: 3;
+                        .seta{
+                            top: 0;
+                        }
+                    }
+
+                    &.elem7 {
+                        order: 7;
+                        width: 16.55556vw;
+                        padding: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 16.55556vw;
+                    }
+
+                    &.elem8 {
+                        order: 8;
+                        height: 33.3333vw;
+                    }
+                }
+            }
+
+            &-info {
+                width: 100%;
+                max-width: 75rem;
+                margin: auto;
+                height: auto;
+                padding: 4rem 3rem;
+                justify-content: flex-end;
+                &-big {
+                    font-family: $font3;
+                    font-weight: $bold;
+                    font-display: swap;
+                    font-size: 1.1rem;
+                    margin: 0;
+
+                    span {
+                        color: $cor3;
+                    }
+                }
+            }
+        }
+    }
+}

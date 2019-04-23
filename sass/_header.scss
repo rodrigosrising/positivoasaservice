@@ -1,0 +1,90 @@
+.header{
+    padding-bottom: 3px;
+    background-image: linear-gradient(to right, rgba(#FFF, 1), rgba(#74D2DA, 1));
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    z-index: 20;
+    width: 100vw;
+    &-container{
+        background-color: #FFF;
+        width: 100%;
+        max-width: 75rem;
+        margin: auto;
+    }
+    &-content {
+        width: 100%;
+        padding: 1rem 2rem 0.6rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+}
+.custom-logo{
+    width: auto;
+    height: 55px;
+    transition: height 0.5s;
+}
+.is-stuck{
+    .custom-logo{
+        height: 40px;
+    }
+}
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .header {
+        padding-bottom: 5px;
+        &-container {
+            position: relative;
+            &:before,
+            &:after {
+                content: '';
+                background-color: $cor1;
+                width: 100vw;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                z-index: 0;
+            }
+
+            &:after {
+                content: '';
+                background-color: $cor1;
+                width: 100vw;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                left: inherit;
+                top: 0;
+                display: block;
+            }
+        }
+        &-content{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 3;
+            .custom-logo {
+                height: 65px;
+            }
+        }
+    }
+    .site-menu{
+        li{
+            margin-bottom: 0;
+        }
+    }
+    .is-stuck {
+        .custom-logo {
+            height: 55px;
+        }
+    }
+}

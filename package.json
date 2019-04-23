@@ -1,0 +1,22 @@
+{
+  "name": "wordpress_theme",
+  "version": "1.0.0",
+  "description": "wordpress theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rodrigo Garcia",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {}
+}

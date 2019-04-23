@@ -1,0 +1,261 @@
+.performance{
+    min-height: 90vh;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    &-imagem{
+        height: auto;
+        overflow: hidden;
+    }
+    &-container{
+        // min-height: 400px;
+        height: auto;
+        background-color: $cor3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    &-texto{
+        padding: 3rem 2rem;
+        color: $cor2;
+        .titulo{
+            font-family: $font3;
+            font-display: swap;
+            font-weight: $light;
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+            &:before{
+                content: '';
+                background-image: url(../../assets/images/performance-grafico.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 100px;
+                width: 80vw;
+                display: block;
+                position: absolute;
+                top: 1rem;
+                left: -2rem;
+                z-index: -1;
+            }
+            strong{
+                font-weight: $black;
+            }
+        }
+        ul{
+            padding: 0 1rem;
+            list-style: none;
+            list-style-position: inside;
+            li{
+                color: $cor1;
+                font-family: $font3;
+                font-display: swap;
+                font-size: 0.8rem;
+                line-height: 1.15rem;
+                position: relative;
+                text-indent: 1rem;
+                margin-bottom: 1rem;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    border-right: 1px solid $cor1;
+                    border-bottom: 1px solid $cor1;
+                    width: 5px;
+                    height: 5px;
+                    top: 10px;
+                    left: 0;
+                    transform: translateY(-50%) rotate(-45deg);
+
+                }
+            }
+        }
+    }
+    &-marcas{
+        justify-self: flex-end;
+        margin-top: auto;
+        background-color: $cor2;
+        padding: 0 2rem;
+        &-lista{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            height: 15vh;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 3rem;
+
+            img {
+                height: 4.5vh;
+            }
+        }
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .performance {
+
+        &-texto {
+            .titulo {
+                font-size: 1.7rem;
+                line-height: 2.1rem;
+            }
+
+            ul {
+                li {
+                    font-size: 0.9rem;
+                    line-height: 1.2rem;
+
+                    &:before {
+                        top: 8px;
+                        left: 0;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .performance {
+        min-height: auto;
+        height: auto;
+        padding: 0;
+        flex-direction: row;
+        &-imagem {
+            min-height: 37.5vh;
+            height: 500px;
+            max-height: 600px;
+            width: 50vw;
+            img{
+                object-fit: cover;
+                object-position: right 0;
+                min-height: 37.5vh;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        &-container {
+            min-height: 37.5vh;
+            height: 600px;
+            max-height: 600px;
+            width: 50vw;
+            height: auto;
+            background-color: $cor3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+
+        &-texto {
+            padding: 6rem 3rem;
+            color: $cor2;
+            max-width: 37.5rem;
+
+            .titulo {
+                font-family: $font3;
+                font-display: swap;
+                font-weight: $light;
+                font-size: 2.1rem;
+                line-height: 2.5rem;
+                text-transform: uppercase;
+                margin-bottom: 2rem;
+                position: relative;
+                z-index: 2;
+
+                &:before {
+                    content: '';
+                    background-image: url(../../assets/images/performance-grafico.svg);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    height: 70px;
+                    width: 540px;
+                    display: block;
+                    position: absolute;
+                    top: 1rem;
+                    left: -7rem;
+                    z-index: -1;
+                }
+
+                strong {
+                    font-weight: $black;
+                }
+            }
+
+            ul {
+                padding: 0 1rem;
+                list-style: none;
+                list-style-position: inside;
+
+                li {
+                    color: $cor1;
+                    font-family: $font3;
+                    font-display: swap;
+                    // font-size: 1.2rem;
+                    line-height: 1.5rem;
+                    position: relative;
+                    text-indent: 1rem;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        border-right: 1px solid $cor1;
+                        border-bottom: 1px solid $cor1;
+                        width: 6px;
+                        height: 6px;
+                        top: 12px;
+                        left: 0;
+                        transform: translateY(-50%) rotate(-45deg);
+
+                    }
+                }
+            }
+        }
+
+        &-marcas {
+            justify-self: flex-end;
+            margin-top: auto;
+            background-color: $cor2;
+            padding: 0 5rem;
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            width: 37.5rem;
+            z-index: 3;
+            &:after {
+                content: '';
+                background-color: $cor2;
+                width: 100vw;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+            }
+            &-lista {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                height: auto;
+                align-items: center;
+                justify-content: space-around;
+                padding: 2rem 3rem;
+                position: relative;
+                z-index: 2;
+
+                img {
+                    // height: 4.5vh;
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
